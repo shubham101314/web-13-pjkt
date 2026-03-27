@@ -60,9 +60,5 @@ def register_class():
         "data": data
     }, 201
 
-@app.route('/static/<path:filename>')
-def static_files(filename):
-    return send_from_directory('static', filename, cache_timeout=3600)  # 1 hour
-    r
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
